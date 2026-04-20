@@ -1,0 +1,207 @@
+:root{
+    --main-color: rgb(255, 0, 98);
+    --second-color: blue;
+    --white-color: white;
+    --black-color: black;
+    --bg-navfoot: pink;
+    --section-bg: rgba(255, 0, 98, 0.096);
+    --gridiant-white: rgba(255, 255, 255, 0.856);
+    --bg-img-white:rgba(255, 255, 255, 0.171);
+}
+
+body.dark{
+    --main-color: rgb(255, 167, 196);
+    --second-color: rgba(80, 138, 255, 0.521);
+    --white-color: black;
+    --black-color: white;
+    --bg-navfoot: #1e1e1e;
+    --section-bg: #121212;
+    --gridiant-white: rgba(0, 0, 0, 0.856);
+    --bg-img-white:rgb(0, 0, 0);
+}
+
+body{
+    background-color: var(--section-bg);
+    scroll-behavior: smooth;
+}
+nav,
+footer{
+    background-color: var(--bg-navfoot);
+}
+.colorPink,
+nav .navbar-brand:hover,
+nav .navbar-brand:focus,
+nav .navbar-nav li .nav-link.active,
+nav .navbar-nav li .nav-link:hover
+{
+    color: var(--main-color);
+}
+nav .navbar-nav .nav-item .nav-link{
+    color: var(--black-color);
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+nav .nav-item .dropdown-menu{
+    background-color: var(--white-color);
+}
+#darkMode:hover{
+    color: var(--main-color);
+}
+.logo span{
+    color: var(--second-color);
+}
+header{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.555) , var(--bg-img-white)) , url('../image/hero-img.jpg');
+    background-position: center;
+    background-size: cover;   
+}
+header h2,
+#about h2{
+    font-size: 40px;
+}
+header button,
+#about button,
+#services button{
+    background-color: var(--main-color);
+    border: none;
+    padding: 15px 40px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: var(--white-color);
+    transition: all 0.4s ease;
+}
+header button:hover,
+#about button:hover
+{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+#about,
+#contact{
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(var(--gridiant-white)),url("../image/background-about.jpg");
+}
+#about iframe,
+#services .card,
+#team .card,
+#contact .work-day{
+    border-top-left-radius:20%;
+    border-bottom-right-radius:20%;
+    border-top-right-radius:10%;
+    border-bottom-left-radius:10%;
+}
+#services i{
+    font-size: 70px;
+}
+#services div p,
+#services div h5{
+    color: var(--black-color);
+}
+#services .card,
+#team .card,
+#contact .work-day{
+    border: 1px solid var(--main-color);
+    transition: all 1s;
+}
+#services .card:hover{
+    background-color: var(--second-color);
+    border-color: var(--second-color)
+}
+#services .card{
+    background-color: var(--white-color);
+}
+#services .card:hover button{
+    background-color: var(--white-color);
+    color: var(--main-color);
+}
+#services .card:hover i,
+#services .card:hover p{
+    color: var(--white-color);
+}
+#services .card:hover h5{
+    color: var(--main-color);
+}
+#event .card{
+    border: 1px solid var(--main-color);
+    border-radius: 20px;
+}
+#event .event-date{
+    background-color: var(--second-color);
+}
+#event .card img,
+#event .card h3{
+    transition: all 0.5s;
+}
+#event .card:hover img{
+    transform: scale(1.1);
+}
+#event .card{
+    background-color: var(--white-color);
+}
+#event .card-body{
+    color: var(--black-color);
+}
+#event .card:hover .card-body h3{
+    color: var(--main-color);
+}
+#team{
+    background-color: var(--white-color);
+}
+#team .card:hover .team-info,
+#event .event-img{
+    background-color: var(--main-color);
+}
+#team .card:hover .team-info h5{
+    color: var(--white-color);
+}
+#team .card .team-info{
+    transition: all 1s;
+    background-color: var(--white-color);
+}
+#team .card-img .social{
+    top: 85%;    
+    left: 50%;
+    color: var(--main-color);
+    display: none;
+    transition: all 2s;
+}
+#team .card:hover .social{
+    display: block;
+}
+#contact{
+    color: var(--black-color);
+}
+#contact a{
+    color: var(--black-color);
+}
+#contact a:hover, 
+#contact .hour:hover{
+    color: var(--second-color);
+}
+#contact .contact-icon i{
+    margin-right: 5px;
+    transition: all 1s;
+}
+#contact .contact-icon i:hover{
+    color: var(--second-color);
+}
+footer a{
+    color: var(--second-color);
+}
+@media (max-width:990px){
+    #team .card-img .social i{
+        font-size: 30px;
+    }    
+}
+@media (min-width:991px) {
+    #team .card-img .social i{
+        font-size: 15px;
+    }
+}
+
+
